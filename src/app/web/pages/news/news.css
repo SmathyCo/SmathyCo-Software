@@ -1,0 +1,17 @@
+.news-box {
+    border: solid 1px black;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    animation: fadeInFromBottom var(--AnimationTime) ease-out;
+}
+
+.news-box:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for floating effect */
+    transform: translateY(-4px);
+}
+
+.news-box img {
+    width: 250px;
+}

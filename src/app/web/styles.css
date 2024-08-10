@@ -119,6 +119,7 @@ body {
     text-decoration: none;
     color: white;
     font-size: 20px;
+    width: 125px;
 }
 
 .nav ul a div {
@@ -173,10 +174,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-.content {
-    animation: fadeInFromLeft var(--AnimationTime) ease-out;
-}
-
 .img-wrapper {
     animation: fadeInFromTop var(--AnimationTime) ease-out;
 }
@@ -200,5 +197,27 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes fadeInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

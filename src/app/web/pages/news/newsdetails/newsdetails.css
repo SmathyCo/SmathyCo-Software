@@ -1,0 +1,11 @@
+.content p {
+    width: 75%;
+}
+
+.content h1, .content p {
+    animation: fadeInFromLeft var(--AnimationTime) ease-out;
+}
+
+.content img {
+    animation: fadeInFromRight var(--AnimationTime) ease-out;
+}
