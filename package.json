@@ -1,0 +1,21 @@
+{
+  "name": "smathyco-software",
+  "version": "1.0.0",
+  "description": "The SmathyCo software where you can find all you need from SmathyCo!",
+  "main": "./src/app/main.js",
+  "dependencies": {
+    "adm-zip": "^0.5.15",
+    "axios": "^1.7.3",
+    "electron-packager": "^17.1.2",
+    "windows-shortcuts": "^0.1.6"
+  },
+  "devDependencies": {
+    "electron": "^31.3.1"
+  },
+  "scripts": {
+    "test": "npx electron .",
+    "build": "npx electron-packager . SmathyCo-Software --platform=win32,darwin,linux --arch=x64 --out=dist/ --icon=./src/img/logo --overwrite"
+  },
+  "author": "Smathy, Coolboy",
+  "license": "ISC"
+}

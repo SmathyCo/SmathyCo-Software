@@ -1,0 +1,204 @@
+:root {
+    --AnimationTime: 1.5s
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.7px;
+    overflow: hidden;
+}
+
+.scrollable-content {
+    margin-top: 40px; /* Push content below the titlebar */
+    padding: 10px;
+    height: calc(100vh - 40px); /* Full height minus titlebar height */
+    overflow-y: auto; /* Enable vertical scroll */
+    overflow-x: hidden; /* Hide horizontal scrollbar if not needed */
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#titlebar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #333;
+    padding: 5px 10px;
+    -webkit-app-region: drag;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.titlebar-button {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px; /* Space between buttons */
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-app-region: no-drag; /* Ensures buttons are not draggable */
+    background-color: #ccc; /* Add a background color for visibility */
+}
+
+.minimize {
+    background-color: #f0ad4e;
+}
+
+.minimize:hover {
+    background-color: #ee981f;
+}
+
+.maximize {
+    background-color: #5bc0de;
+}
+
+.maximize:hover {
+    background-color: #1b93b8;
+}
+
+.close {
+    background-color: #d9534f;
+}
+
+.close:hover {
+    background-color: #a1231f;
+}
+
+#content {
+    flex: 1;
+    background-color: #fff;
+}
+
+.nav {
+    background-color: #333;
+    height: 100vh; /* Full height of the viewport */
+    width: 200px;
+    position: fixed; /* Fixes the navigation bar in place */
+    top: 0; /* Aligns the navigation bar to the top of the viewport */
+    left: 0; /* Aligns the navigation bar to the left edge of the viewport */
+    z-index: 1000; /* Ensures the navigation bar stays above other content */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontally centers the content */
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex;
+    flex-direction: column; /* Stack the links vertically */
+    align-items: center; /* Center the links horizontally */
+    width: 100%; /* Ensure the list takes up full width */
+}
+
+.nav ul a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.nav ul a div {
+    padding: 30px;
+    margin: 10px 0; /* Adjust margin for vertical spacing */
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.nav ul a div:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for floating effect */
+    transform: translateY(-4px); /* Lift the element */
+}
+
+.content {
+    margin-top: 100px;
+    margin-left: 250px;
+}
+
+.content .img-wrapper {
+    margin-left: 60px;
+}
+
+.content #img {
+    width: 500px;
+    margin-bottom: 100px;
+}
+
+#mt {
+    margin-top: 50px;
+}
+
+#sub {
+    margin-left: 20px;
+}
+
+.play {
+    width: fit-content;
+    height: 30px;
+    background-color: rgb(56, 56, 212);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    margin-top: 12px;
+    margin-left: 25px;
+    transition: transform 0.3s ease;
+}
+
+.play:hover {
+    background-color: rgb(18, 18, 197);
+    transform: translateY(-4px);
+    transition: transform 0.3s ease;
+}
+
+.content {
+    animation: fadeInFromLeft var(--AnimationTime) ease-out;
+}
+
+.img-wrapper {
+    animation: fadeInFromTop var(--AnimationTime) ease-out;
+}
+
+@keyframes fadeInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

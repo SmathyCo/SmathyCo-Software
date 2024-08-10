@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="games.css">
+    <title>Games</title>
+</head>
+<body>
+    <div id="titlebar">
+        <div class="titlebar-button minimize"></div>
+        <div class="titlebar-button maximize"></div>
+        <div class="titlebar-button close"></div>
+    </div>
+    <div style="display: flex;height: 100%;">
+        <nav class="nav">
+            <ul style="margin-top: 50px;">
+                <a href="../index.html">
+                    <div>
+                        <li>Home</li>
+                    </div>
+                </a>
+                <a href="">
+                    <div id="mt">
+                        <li>Games</li>
+                    </div>
+                </a>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Games</h1>
+            &nbsp;
+            <div style="display: flex;" id="games">
+                <p id="sub">SmathyCo Zombie Game</p>
+                <img src="../img/zombiegamelogo.png" alt="" style="width: 25px;height: 25px;border-radius: 10px;margin-top: 12px;margin-left: 10px;">
+                <button class="play" id="playButton">Download</button>
+                <button class="play" id="uninstall">Uninstall</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../titlebar.js"></script>
+<script src="download.js"></script>
+</html>
