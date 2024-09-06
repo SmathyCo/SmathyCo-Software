@@ -1,0 +1,24 @@
+{
+  "name": "smathycosoftware",
+  "version": "1.0.0",
+  "description": "The official SmathyCo Software.",
+  "main": "src/electron/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmathyCo/SmathyCo-Software.git"
+  },
+  "keywords": [
+    "SmathyCoSoftware",
+    "SmathyCo",
+    "SmathyCo-Software"
+  ],
+  "author": "Smathy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SmathyCo/SmathyCo-Software/issues"
+  },
+  "homepage": "https://github.com/SmathyCo/SmathyCo-Software#readme"
+}
