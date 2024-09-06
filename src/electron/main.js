@@ -13,6 +13,7 @@ function createWindow () {
     win.loadFile('index.html')
 }
 
+//test
 app.whenReady().then(() => {
     createWindow()
 
