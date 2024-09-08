@@ -1,0 +1,19 @@
+# Node
+node_modules/
+package-lock.json
+package.json
+
+# Obfuscater
+obfuscate-all.js
+
+# All the source code
+src
+
+# Makefile
+Makefile
+
+# release folder
+release/
+
+# obf folder
+obf/
